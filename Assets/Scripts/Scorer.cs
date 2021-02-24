@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Scorer : MonoBehaviour
 {
-  [SerializeField] TextMesh scoreText = null;
+  TextMesh scoreText = null;
 
   int bumpScore = 0;
 
   void OnCollisionEnter(Collision other){
-    bumpScore++;
 
-    Debug.Log("Score : " + bumpScore);
-    UpdateScore();
+    if(!other.gameObject.CompareTag("Hit")){
+      bumpScore++;
+      Debug.Log("Score : " + bumpScore);
+      //UpdateScore();
 
+    }
   }
 
   public void UpdateScore(){
