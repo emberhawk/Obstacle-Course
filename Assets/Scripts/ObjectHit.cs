@@ -9,6 +9,7 @@ public class ObjectHit : MonoBehaviour
       //Debug.Log("Wall hit " + other.gameObject.name);
       if(other.gameObject.name == "Player (Dodgy)"){
         GetComponent<MeshRenderer>().material.color = Color.red;
+
       }
 
     }
